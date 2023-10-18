@@ -13,7 +13,7 @@ export const GlobalStyles = createGlobalStyle`
         flex-direction: column;
         align-items: center; 
         justify-content: center; 
-        height: 100vh;
+        // height: 100vh;
     }
 
     code {
@@ -61,4 +61,8 @@ export const GlobalStyles = createGlobalStyle`
         margin-bottom: 12px;
         color: #007bff;
     };
+
+    li {
+        margin-bottom: 15px;
+    }
 `;

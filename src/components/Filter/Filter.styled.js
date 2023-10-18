@@ -5,5 +5,6 @@ export const Layout = styled.div`
     flex-direction: column; 
     align-items: flex-start; 
     margin-bottom: 16px; 
+    margin-top:16px;
 `;
 

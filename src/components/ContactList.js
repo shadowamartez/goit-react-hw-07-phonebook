@@ -5,12 +5,8 @@ import { selectAllNeededContacts } from '../redux/selectors';
 
 export function ContactList() {
     const contacts = useSelector(selectAllNeededContacts);
-    // const filter = useSelector(selectFilter);
     const dispatch = useDispatch();
 
-    // const filteredContacts = contacts.filter(contact =>
-    //     contact.name.toLowerCase().includes(filter.toLowerCase())
-    // );
 
     const handleDeleteContact = contactId => {
         dispatch(deleteContact(contactId));
@@ -20,7 +16,7 @@ export function ContactList() {
         <ul>
         {contacts.map(contact => (
             <li key={contact.id}>
-            {contact.name}: {contact.number} <b></b>
+            {contact.name}: {contact.phone} <b></b>
                 <button onClick={evt => {
                     handleDeleteContact(evt.target.value);
                 }}>Delete</button>

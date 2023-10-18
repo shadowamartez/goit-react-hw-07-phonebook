@@ -7,20 +7,18 @@ export function Filter() {
     const dispatch = useDispatch();
 
     const handleFilterChange = event => {
-        dispatch(update(event));
+        dispatch(update(event.target.value));
     };
 
     return (
         <Layout>
-        <label htmlFor="filter">Find contacts by name</label>
+        <label htmlFor="filter"></label>
         <input
             type="text"
             id="filter"
             name="filter"
             placeholder="Search contacts by name"
-            onChange={e => {
-                handleFilterChange(e.target.value);
-            }}
+            onChange={handleFilterChange}
         />
         </Layout>
     );
